@@ -10,7 +10,7 @@ export const questions = [{
     },
     {
         questionText: 'What kind of cans did Andy Warhol famously paint?',
-        questionImage: './assets/Andy Warhol.jpg',
+        questionImage: './assets/Campbell.jpg',
         answerOptions: [
             { answerText: 'Van Camp´s pork and beans', isCorrect: false },
             { answerText: 'Starkist Tuna', isCorrect: false },

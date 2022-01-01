@@ -1,8 +1,10 @@
 import React from 'react';
 
+import './style.css';
+
 const Header = () => {
   return (
-    <header>
+    <header className="header">
       <h2>Art Quiz</h2>
     </header>
   );

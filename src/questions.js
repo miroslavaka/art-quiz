@@ -39,7 +39,7 @@ export const questions = [{
         ],
     },
     {
-        questionText: 'How long did it take Leonardo da Vinci to paint Mona Lisa´s smile',
+        questionText: 'How long did it take Leonardo da Vinci to paint Mona Lisa´s smile?',
         questionImage: './assets/Mona Lisa.jpg',
         answerOptions: [
             { answerText: '16 years', isCorrect: true },

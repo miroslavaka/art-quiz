@@ -9,7 +9,7 @@ const Questions = ({ question }) => {
 
   const handleClick = (isCorrect) => {
     if (isCorrect === true) {
-      alert('answer is correct');
+      //alert('answer is correct');
       setI(i + 1);
       console.log(`i: ${i}`);
     }
@@ -27,12 +27,16 @@ const Questions = ({ question }) => {
       {showScore === true ? (
         <div className="score-section">
           <p>
-            Your score: {i} correct questions from {question.length}
+            Your score: {i} correct questions from {question.length}.
           </p>
+          <h2>Contratulation!</h2>
+          <div className="heart"></div>
         </div>
       ) : (
         <>
-          <h4>Questions:</h4>
+          <h4>
+            Question {currentQuestion + 1} / {question.length}:
+          </h4>
           <div className="questions">
             {/* <div className="question-section">
               <div className="question"> */}
@@ -49,8 +53,7 @@ const Questions = ({ question }) => {
                 alt=""
               />
             </div>
-            {/*  </div>
-            </div> */}
+
             <div className="answer-section">
               {question[currentQuestion].answerOptions.map((element) => (
                 <div className="answer" key={element.answerText}>

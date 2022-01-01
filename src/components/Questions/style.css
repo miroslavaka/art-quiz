@@ -4,10 +4,11 @@
 }
 
 main {
-    width: 70vh;
+    width: 40vw;
+    height: 60vh;
     background: var(--gold);
     border-radius: 0.8rem;
-    box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.3);
+    box-shadow: 0.1rem 0.2rem 0.3rem rgba(0, 0, 0, 0.3);
     margin: auto;
     padding: 1rem;
 }
@@ -15,7 +16,7 @@ main {
 .questions {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 2fr;
+    grid-template-rows: 0.5fr 2fr;
 }
 
 .question-text {
@@ -27,35 +28,106 @@ main {
     grid-area: 2/1/2/2;
 }
 
-.question-photo img {
+.question-img {
     border-radius: 20%;
+    margin-left: 1rem;
 }
 
 .answer-btn {
-    width: 40%;
-    border-radius: 3px;
+    width: 60%;
+    border-radius: 0.3rem;
     background: var(--white);
     border: none;
     cursor: pointer;
-    padding: 5px;
-    margin: 3px;
+    padding: 0.2rem;
+    margin: 0.15rem;
     grid-area: 2/2/3/3;
+    font-family: 'Zen Antique', serif;
 }
 
 .answer-section {
     padding-left: 2rem;
 }
 
+.score-section {
+    text-align: center;
+    padding-top: 4rem;
+}
 
-/* .skew {
-    position: fixed;
-    left: 27.5%;
-    top: 46%;
-    transform: translate(-27.5%, -46%);
-    background-color: white;
-    border-radius: 0.8rem;
-    width: 25vh;
-    height: 55%;
-    background-position: 300px 130px;
-    z-index: 0;
-} */
+@media only screen and (max-width: 55rem) {
+    /*880px*/
+    main {
+        width: 80vw;
+    }
+}
+
+@media only screen and (max-width: 43rem) {
+    /*680px*/
+    main {
+        width: 60vw;
+    }
+    .question-img {
+        width: 100%;
+    }
+    .answer-section {
+        padding-left: 1rem;
+    }
+    .answer-btn {
+        font-size: 0.7rem;
+        width: 90%;
+        padding: 0;
+        margin: 0;
+    }
+}
+
+
+/*----------------------*/
+
+.heart {
+    width: 4rem;
+    height: 4rem;
+    background: yellow;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    transform: rotate(45deg);
+    box-shadow: 0 0.1rem 0.1rem rgba(0, 0, 0, 0.01), 0 0.2rem 0.2rem rgba(0, 0, 0, 0.01);
+    animation-name: beats;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+.heart:before {
+    content: '';
+    width: 4rem;
+    height: 4rem;
+    background: yellow;
+    position: absolute;
+    top: 0rem;
+    left: -2.5rem;
+    border-radius: 50%;
+}
+
+.heart:after {
+    content: '';
+    width: 4rem;
+    height: 4rem;
+    background: yellow;
+    position: absolute;
+    top: -2.5rem;
+    left: 0rem;
+    border-radius: 50%;
+}
+
+@keyframes beats {
+    0% {
+        transform: scale(1) rotate(45deg);
+    }
+    70% {
+        transform: scale(0.6) rotate(45deg);
+    }
+}
